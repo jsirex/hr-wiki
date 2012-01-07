@@ -156,8 +156,11 @@ require_once( "$IP/extensions/ParserFunctions/ParserFunctions.php" );
 require_once( "$IP/extensions/Nuke/Nuke.php" );
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/FCKeditor/FCKeditor.php" );
+require_once( "$IP/extensions/WikiCategoryTagCloud/WikiCategoryTagCloud.php" );
+
 
 include_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
+
 enableSemantics('hr.wiki');
 
 require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
