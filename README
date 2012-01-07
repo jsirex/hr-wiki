@@ -2,5 +2,6 @@ Required packages:
 * php5-intl
 * convert
 * imagemagik
+* php5-suhosin
 
 

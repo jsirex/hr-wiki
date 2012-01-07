@@ -135,15 +135,9 @@ $wgSpecialPages['FileIndexer'] = 'FileIndexer';
  * @return BOOL TRUE
  */
 function wfFiSetupExtension() {
-    global $wgMessageCache;
- 
-    if(!function_exists('efFiMessages')){
-        require_once('FileIndexer.i18n.php');
- 
-        foreach(efFiMessages() as $sLanguage => $sMessages){
-            $wgMessageCache->addMessages($sMessages, $sLanguage);
-        }
-    }
+    global $dir;
+    $wgExtensionAliasesFiles['FileIndexer']  = $dir . 'FileIndexer.i18n.php';
+    $wgSpecialPages['FileIndexer'] = 'FileIndexer';
  
     return true;
 }
