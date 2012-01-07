@@ -123,24 +123,13 @@ $wgExtensionCredits['specialpage'][] = array(
     'url' => 'http://www.mediawiki.org/wiki/Extension:FileIndexer'
 );
  
-$wgExtensionFunctions[] = 'wfFiSetupExtension';
- 
 $dir = dirname(__FILE__) . '/';
 $wgAutoloadClasses['FileIndexer'] = $dir . 'FileIndexer_body.php';
 $wgSpecialPages['FileIndexer'] = 'FileIndexer';
  
-/**
- * Bereitet das Wiki auf die Spezialseite vor.
- *
- * @return BOOL TRUE
- */
-function wfFiSetupExtension() {
-    global $dir;
-    $wgExtensionAliasesFiles['FileIndexer']  = $dir . 'FileIndexer.i18n.php';
-    $wgSpecialPages['FileIndexer'] = 'FileIndexer';
+$wgExtensionMessagesFiles['FileIndexer']  = $dir . 'FileIndexer.i18n.php';
+$wgSpecialPages['FileIndexer'] = 'FileIndexer';
  
-    return true;
-}
  
 /*
  * **********************************************************************************************

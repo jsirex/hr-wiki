@@ -3,5 +3,6 @@ Required packages:
 * convert
 * imagemagik
 * php5-suhosin
-
+* antiword
+* catdoc
 
