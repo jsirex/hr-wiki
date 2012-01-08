@@ -358,6 +358,7 @@ abstract class UploadBase {
 		global $wgAllowJavaUploads;
 		# get the title, even though we are doing nothing with it, because
 		# we need to populate mFinalExtension
+
 		$this->getTitle();
 
 		$this->mFileProps = File::getPropsFromPath( $this->mTempPath, $this->mFinalExtension );

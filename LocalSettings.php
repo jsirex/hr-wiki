@@ -72,7 +72,6 @@ $wgMemCachedServers = array();
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads  = true;
 $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
 
@@ -157,7 +156,7 @@ require_once( "$IP/extensions/Nuke/Nuke.php" );
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/FCKeditor/FCKeditor.php" );
 require_once( "$IP/extensions/WikiCategoryTagCloud/WikiCategoryTagCloud.php" );
-
+require_once( "$IP/extensions/intersection/DynamicPageList.php" );
 
 include_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
 
@@ -175,7 +174,13 @@ require_once( "$IP/extensions/SemanticFormsInputs/SemanticFormsInputs.php" );
 $wgMaxUploadFiles = 10;
 
 $wgVerifyMimeType = false;
+$wgAllowJavaUploads = true;
+
 # Upload Filters
+
+$wgCheckFileExtensions = false;
+$wgStrictFileExtensions = false;
+$wgEnableUploads  = true;
 
 $wgFileExtensions[] = 'doc';
 $wgFileExtensions[] = 'xls';
@@ -196,4 +201,15 @@ $wgEnableParserCache = false;
 $wgCachePages = false;
 
 $wgAmericanDates = true;
+
+
+# DEBUG SECTION
+// error_reporting( E_ALL );
+// ini_set( 'display_errors', 1 );
+// $wgShowExceptionDetails = true;
+// 
+// $wgDebugLogFile = '/tmp/debug.log';
+
+
+
 
