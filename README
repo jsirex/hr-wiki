@@ -6,3 +6,5 @@ Required packages:
 * antiword
 * catdoc
 
+Please use db/initdb.sql for database bootstrap.
+
